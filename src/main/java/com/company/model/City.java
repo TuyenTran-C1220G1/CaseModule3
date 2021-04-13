@@ -2,16 +2,16 @@ package com.company.model;
 
 public class City {
     private int idCity;
-    private String nameHotel;
+    private String nameCity;
     private String descriptionCity;
     private String imageCity;
 
     public City() {
     }
 
-    public City(int idCity, String nameHotel, String descriptionCity, String imageCity) {
+    public City(int idCity, String nameCity, String descriptionCity, String imageCity) {
         this.idCity = idCity;
-        this.nameHotel = nameHotel;
+        this.nameCity = nameCity;
         this.descriptionCity = descriptionCity;
         this.imageCity = imageCity;
     }
@@ -24,12 +24,12 @@ public class City {
         this.idCity = idCity;
     }
 
-    public String getNameHotel() {
-        return nameHotel;
+    public String getNameCity() {
+        return nameCity;
     }
 
-    public void setNameHotel(String nameHotel) {
-        this.nameHotel = nameHotel;
+    public void setNameCity(String nameCity) {
+        this.nameCity = nameCity;
     }
 
     public String getDescriptionCity() {

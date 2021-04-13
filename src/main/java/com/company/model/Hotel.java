@@ -3,19 +3,19 @@ package com.company.model;
 public class Hotel {
     private int idHotel;
     private String nameHotel;
-    private String DescriptionHotel;
+    private String descriptionHotel;
     private String imageHotel;
-    private City city;
+    private int idCity;
 
     public Hotel() {
     }
 
-    public Hotel(int idHotel, String nameHotel, String descriptionHotel, String imageHotel, City city) {
+    public Hotel(int idHotel, String nameHotel, String descriptionHotel, String imageHotel, int idCity) {
         this.idHotel = idHotel;
         this.nameHotel = nameHotel;
-        DescriptionHotel = descriptionHotel;
+        this.descriptionHotel = descriptionHotel;
         this.imageHotel = imageHotel;
-        this.city = city;
+        this.idCity = idCity;
     }
 
     public int getIdHotel() {
@@ -35,11 +35,11 @@ public class Hotel {
     }
 
     public String getDescriptionHotel() {
-        return DescriptionHotel;
+        return descriptionHotel;
     }
 
     public void setDescriptionHotel(String descriptionHotel) {
-        DescriptionHotel = descriptionHotel;
+        this.descriptionHotel = descriptionHotel;
     }
 
     public String getImageHotel() {
@@ -50,11 +50,22 @@ public class Hotel {
         this.imageHotel = imageHotel;
     }
 
-    public City getCity() {
-        return city;
+    public int getIdCity() {
+        return idCity;
     }
 
-    public void setCity(City city) {
-        this.city = city;
+    public void setIdCity(int idCity) {
+        this.idCity = idCity;
+    }
+
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "idHotel=" + idHotel +
+                ", nameHotel='" + nameHotel + '\'' +
+                ", descriptionHotel='" + descriptionHotel + '\'' +
+                ", imageHotel='" + imageHotel + '\'' +
+                ", idCity=" + idCity +
+                '}';
     }
 }

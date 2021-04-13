@@ -10,12 +10,10 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "Servlet", value = "/hotel")
-public class Servlet extends HttpServlet {
-    private CityService cityService;
-    public void init(){
-        cityService = new CityService();
-    }
+@WebServlet(name = "Servlet", value = "/city")
+public class CityServlet extends HttpServlet {
+    private CityService cityService = new CityService();
+
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
