@@ -1,5 +1,3 @@
-com/company/service/CustomerService.java
- com.company.service.CustomerService
 com/company/service/RoomService.java
  com.company.service.RoomService
 com/company/dao/DBConnection.java
@@ -22,6 +20,8 @@ com/company/model/Hotel.java
  com.company.model.Hotel
 com/company/service/OrderService.java
  com.company.service.OrderService
+com/company/service/CustomerService.java
+ com.company.service.CustomerService
 com/company/service/CityService.java
  com.company.service.CityService
 com/company/controller/Servlet.java

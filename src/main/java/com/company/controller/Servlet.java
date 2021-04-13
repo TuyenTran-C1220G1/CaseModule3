@@ -2,6 +2,7 @@ package com.company.controller;
 
 import com.company.model.City;
 import com.company.service.CityService;
+import com.company.service.CustomerService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -11,7 +12,10 @@ import java.util.List;
 
 @WebServlet(name = "Servlet", value = "/hotel")
 public class Servlet extends HttpServlet {
-    private CityService cityService = new CityService();
+    private CityService cityService;
+    public void init(){
+        cityService = new CityService();
+    }
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

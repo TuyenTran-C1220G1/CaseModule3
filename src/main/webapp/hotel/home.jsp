@@ -56,13 +56,13 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="carousel1.webp" class="d-block w-100" alt="...">
+                        <img src="imageCarosel/carousel1.webp" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="carousel2.webp" class="d-block w-100" alt="...">
+                        <img src="imageCarosel/carousel2.webp" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="carousel3.webp" class="d-block w-100" alt="...">
+                        <img src="imageCarosel/carousel3.webp" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
@@ -80,10 +80,10 @@
     </div>
 </div>
 <%---- hhh--%>
-<div class="container" style="margin-top: 50px;padding: 10px">
+<div class="container " style="margin-top: 50px;padding: 50px">
     <div class="row">
         <c:forEach var="city" items="${cities}">
-            <div class="card col-md-4" style="border: solid 0">
+            <div class="card col-md-4 col-2" style="border: solid 0">
                 <img src="${city.imageCity}" class="" alt="..." style="border-radius: 10px">
                 <div class="card-body">
                     <p class="card-text">${city.descriptionCity}</p>
