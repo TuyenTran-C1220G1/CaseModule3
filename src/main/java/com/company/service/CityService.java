@@ -34,4 +34,24 @@ public class CityService {
         }
         return cities;
     }
+
+    public City findCityById(int idCity){
+        String sql ="select * from city where id_City=?";
+        try{
+            conn = DBConnection.getConnection();
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1,idCity);
+            rs = ps.executeQuery();
+            while (rs.next()){
+                int id = rs.getInt("id_city");
+                String name= rs.getString("name_city");
+                String description = rs.getString("description_city");
+                String image= rs.getString("image_city");
+                return new City(id,name,description,image);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return null;
+    }
 }

@@ -7,13 +7,21 @@
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 <!--nav-->
-<jsp:include page="header.jsp"></jsp:include>
+<div class="container">
+    <jsp:include page="header.jsp"></jsp:include>
+</div>
 <!--sss-->
 <div style="background-color: lightblue;height: 425px;padding: 20px">
     <div class="container">
+
         <div class="row">
             <div class="col-4" style="background-color: blue;border-radius: 20px;padding: 15px">
                 <div class="mb-3"><h4 style="text-align: center">Tìm kiếm khách sạn</h4></div>
@@ -84,7 +92,8 @@
     <div class="row">
         <c:forEach var="city" items="${cities}">
             <div class="card col-md-4" style="border: solid 0">
-                <img src="${city.imageCity}" class="" alt="..." style="border-radius: 10px">
+                <a href="/hotel?idCity=${city.idCity}">${city.nameCity}</a>
+                <img onclick='window.location.href="/hotel?idCity=${city.idCity}"' src="${city.imageCity}" class="" alt="..." style="border-radius: 10px">
                 <div class="card-body">
                     <p class="card-text">${city.descriptionCity}</p>
                 </div>
@@ -93,7 +102,11 @@
     </div>
 </div>
 
-<jsp:include page="footer.jsp"></jsp:include>
+<div>
+    <jsp:include page="footer.jsp"></jsp:include>
+</div>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
